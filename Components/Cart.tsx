@@ -13,6 +13,8 @@ interface PropsInfo {
   titleThirdCart: string;
   imgThirdCart: string;
   footerTitleThirdCart: string;
+
+  secondCartCalled: boolean;
 }
 
 export const Cart = ({
@@ -26,6 +28,8 @@ export const Cart = ({
   titleThirdCart,
   imgThirdCart,
   footerTitleThirdCart,
+
+  secondCartCalled,
 }: PropsInfo) => {
   return (
     <div className=" ml-5 mb-4 flex gap-5 relative bottom-80 mr-5 ">
@@ -72,16 +76,33 @@ export const Cart = ({
         </Link>
       </div>
 
-      <div className=" w-96   h-36 p-5 bg-white ">
-        <p className="font-bold text-xl p-3">
-          experienceSign in for your best experience
-        </p>
+      {/* fourth */}
 
-        <button className="   text-center text-xs bg-[#f7ca00] w-full rounded h-7">
-          Sign in securely
-        </button>
-        <img src="/gifts.jpg" className=" pt-10 mt-3 w-80  h-72  " alt="" />
+      <div className=" w-96 p-5 bg-white ">
+        <p className="font-bold text-xl p-3 ">Shop in your currency</p>
+
+        <img
+          src="/ShopCurrency.jpg"
+          className=" h-64 mb-4 cursor-pointer  "
+          alt=""
+        />
+        <Link href="#">
+          <a className=" p-5  text-xs font-bold text-[#007185]">Learn more</a>
+        </Link>
       </div>
+
+      {!secondCartCalled && (
+        <div className=" w-96   h-36 p-5 bg-white ">
+          <p className="font-bold text-xl p-3">
+            experienceSign in for your best experience
+          </p>
+
+          <button className="   text-center text-xs bg-[#f7ca00] w-full rounded h-7">
+            Sign in securely
+          </button>
+          <img src="/gifts.jpg" className=" pt-10 mt-1 w-80  h-72  " alt="" />
+        </div>
+      )}
     </div>
   );
 };

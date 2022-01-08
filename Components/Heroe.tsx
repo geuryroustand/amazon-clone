@@ -16,8 +16,21 @@ export const Heroe = () => {
         titleThirdCart="Save on quality returned products"
         imgThirdCart="/show-amazon-wareHouse.jpg"
         footerTitleThirdCart="Shop on Amazon Warehouse"
+        secondCartCalled={false}
       />
-      {/* <Cart /> */}
+
+      <Cart
+        titleFistCart="Trainers from popular brands"
+        imgFirstCart="/trainers.jpg"
+        footerTitleFistCart="See more"
+        titleSecondCart="Coffee & Espresso Machines"
+        imgSecondCart="/caffe.jpg"
+        footerTitleSecondCart="Discover now"
+        titleThirdCart="Top Deal"
+        imgThirdCart="/TopDeal.jpg"
+        footerTitleThirdCart="Shop more deals"
+        secondCartCalled={true}
+      />
     </section>
   );
 };
